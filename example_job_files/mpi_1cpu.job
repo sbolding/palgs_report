@@ -1,0 +1,16 @@
+#PBS -l nodes=1:nehalem:ppn=1
+#PBS -l walltime=00:50:00
+#PBS -l mem=1gb
+#PBS -N psum_mpi_1cpu
+#PBS -S /bin/bash
+#PBS -j oe
+
+
+# $PBS_O_WORKDIR is the directory from which the job was submitted
+cd $PBS_O_WORKDIR
+
+mpirun -np 1 ./sum_mpi 1000000 10
+mpirun -np 1 ./sum_mpi 1000000 10
+
+# output from the runs will be in psum_mpi_1cpu.o#### where #### is the job id.
+#---------------- end of job file --------------------------

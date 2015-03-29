@@ -1,0 +1,86 @@
+***************************************
+CSCE 626
+Sample job submission scripts for Eos
+***************************************
+
+List of files
+=======================================
+openmp_1cpu.job: This script will submit the OpenMP job. It uses only 1 processor.
+
+openmp_4cpu.job: This script will submit the OpenMP job. It uses only 4 processors.
+
+mpi_1cpu.job: This script will submit the MPI job. It uses only 1 processor.
+
+mpi_4cpu.job: This script will submit the MPI job. It uses only 4 processors 1 node.
+
+mpi_32cpu.job: This script will submit the MPI job. It uses only 32 processors 2 nodes.
+
+
+Submitting a job file
+======================================
+Eos uses the public version of PBS (TORQUE resource manager and the Maui scheduler)
+for batch processing. More information can be found at:
+http://sc.tamu.edu/help/eos/batch/ 
+
+To submit a job file say mpi_4cpu.job use the following command
+
+qsub mpi_4cpu.job
+
+Some other useful commands related to jobs:
+
+qstat -a
+View information about queued jobs.
+
+qstat -u $USER
+To see information only about your jobs
+
+qstat -f jobid
+View detailed information (such as assigned nodes and resource usage) about queued jobs.
+
+qdel jobid
+Terminates a job with id=jobid
+
+For correct job submission
+======================================
+The Eos cluster has 314 nodes that are powered by the Nehalem processor and 48 by the
+Westemere. The Nehalem-based nodes have 8 cpus/cores each, while the Westmere nodes
+have 12. To change the number of mpi processes, total available memory and allowed time
+for a job, change the relevant lines in the job file. Following are some examples taken
+from http://sc.tamu.edu/help/eos/batch/
+
+
+#PBS -l nodes=16:nehalem:ppn=8
+mem=128gb
+walltime=04:00:00
+
+
+This directive will allocate 16 Nehalem nodes that have 8 cores/node, with an aggregate
+memory allocation of 128 giga-bytes; that is, the per node main memory allocation will
+be 8 giga-bytes. Memory specification per job is mandatory. The duration (wall-clock time)
+of execution is specified to be a maximum 4 hours.
+
+
+#PBS -l nodes=2:ppn=12
+mem=44gb,
+walltime=00:50:00
+This directive will allocate 2 Westmere nodes (12 cores/node) with an aggregate memory
+allocation of 44 giga-bytes; that is, the per node main memory allocation will be 22
+giga-bytes. Memory specification per job is mandatory. The duration (wall-clock time)
+of execution is specified to be a maximum 50 minutes
+
+
+Additionally for openmp jobs
+To change the number of threads for OpenMP jobs set "OMP_NUM_THREADS=". You may run
+multiple executions per job. A maximum of 8(Nehalem) or 12(Westemere) threads should
+be used.
+
+
+Note that as you request more and more cores, you may find that your job takes longer
+time to execute as the Job Scheduler tries to obtain the required resources.
+
+
+For more details on the Eos queues, see:
+http://sc.tamu.edu/uas/batch_status.php?host=eos&tab=queue
+
+For more details on the Eos Batch Processing, see:
+http://sc.tamu.edu/help/eos/batch/

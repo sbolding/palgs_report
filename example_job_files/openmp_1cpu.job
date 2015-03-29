@@ -1,0 +1,20 @@
+#PBS -l nodes=1:nehalem:ppn=1
+#PBS -l walltime=00:50:00
+#PBS -l mem=1gb
+#PBS -N psum_openmp_1cpu
+#PBS -S /bin/bash
+#PBS -j oe
+#
+
+## Some job preprocessing may go here
+export OMP_NUM_THREADS=1
+
+# $PBS_O_WORKDIR is the directory from which the job was submitted
+cd $PBS_O_WORKDIR
+
+./sum_openmp 1000000 10
+./sum_openmp 1000000 10
+
+# output from the runs will be in psum_openmp_1cpu.o####
+# where #### is the job id.
+#---------------- end of job file --------------------------
