@@ -391,10 +391,51 @@ Gaussian distribution of the error, as $1.96 \sigma$.
 
 \section{Experimental Results and Analysis.}
 
-Below are given results for each of the experiments, as well as discussion of the
-observed behavior.
+Below are given results and discussion for each of the experiments.
 
-\subsection{Strong Scaling Study}.
+\subsection{Strong Scaling Study (speed up)}
+
+The results for the speed up study for the OpenMP is given in
+Fig.~\ref{ompsu}. As demonstrated, the algorithm does not demonstrate ideal speedup,
+as expected from a non embarrasingly parallel problem, but is able to solve the
+problem faster than the optimal serial algorithm.  Some rough timing estimates indicate
+that the $O(p)$ calculation in the OpenMP algorithm is $<0.1$ \% of the total runtime
+(for 10$^9$ integers), which was on the order of a several seconds.  Thus the limiting
+factor is likely the overhead of managing threads and memory access times.  The
+algorithm described by Alg.~\ref{alg:openmp} had to be modified slightly to achieve
+the shown resolts.  It was modified to allow each thread to create its own memory within the
+\verb{omp parallel{ section, for storing the input and prefix sums. This was
+        necessary to allow the code to correctly assign memory near the location of
+        the cores.  This significantly improved
+the speedup, in particular going from 4 to 8 threads, which previously showed a drop
+in speedup.  This was the result of processors having to go off chip to access their
+portion of the array.  
+
+The speedup results for the MPI algorithm are given in Fig.~\ref{mpisu}. A more
+legible plot for the cases of $p\leq16$ is given in Fig.~\ref{mpizoomsu}.  The MPI
+algorithm demonstrated better speed up at equivalent counts than the OpenMP
+algorithm.  There was much greater variance at 128 and 256 cores, due to much more
+off node communication time. 
+
+     \begin{figure}[htbp!]
+         \centering
+           \includegraphics[width=0.75\textwidth]{openmp2_speedup.pdf}
+           \caption{Plot of speedup versus $p$ for OpenMP algorithm.\label{ompsu}}
+     \end{figure}
+\begin{figure}[htbp!]
+           \centering
+           \includegraphics[width=0.75\textwidth]{mpi_speedup.pdf}
+           \caption{Plot of speedup versus $p$ for MPI algorithm.\label{mpisu}}
+     \end{figure}
+\begin{figure}[htbp!]
+           \centering
+           \includegraphics[width=0.75\textwidth]{small.pdf}
+           \caption{Zoomed in plot of speedup versus $p$ for MPI
+           algorithm.\label{mpizoomsu}}
+     \end{figure}
+
+
+
 
 \subsection{Weak Scaling Study}
 
@@ -413,6 +454,10 @@ each accessing a portion of the array.  So the algorithm is implemented slightly
 different than indicated.   Otherwords the algorithm did not scale well. 
 
 \section{Conclusions}
+
+Since the prefix sum involves such primitive operations, it exposed any memory or
+other overhead in computations.  It took very efficient code to demonstraight speed
+up.
 
 \end{document}
 

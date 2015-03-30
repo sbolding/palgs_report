@@ -10,4 +10,7 @@
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Weak Scaling Study}{subsection.3.2}% 10
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Determining Asymptotic Coefficients}{subsection.3.2}% 11
 \BOOKMARK [2][-]{subsection.3.3}{Statistics}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{Results}{}% 13
+\BOOKMARK [1][-]{section.4}{Experimental Results and Analysis.}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Strong Scaling Study \(speed up\)}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Weak Scaling Study}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Conclusions}{}% 16
