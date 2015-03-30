@@ -33,16 +33,64 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Description of Experiments}{6}{subsection.3.2}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Strong Scaling Study}{6}{subsubsection.3.2.1}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Weak Scaling Study}{7}{subsubsection.3.2.2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Determining Asymptotic Coefficients}{7}{subsubsection.3.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Statistics}{7}{subsection.3.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Speedup Versus Problem Size}{7}{subsubsection.3.2.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Determining Asymptotic Coefficients}{7}{subsubsection.3.2.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Statistics}{8}{subsection.3.3}}
 \newlabel{err}{{1}{8}{Statistics}{equation.3.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Results and Analysis.}{8}{section.4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Strong Scaling Study (speed up)}{8}{subsection.4.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Weak Scaling Study}{8}{subsection.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Plot of speedup versus $p$ for OpenMP algorithm.\relax }}{9}{figure.caption.2}}
-\newlabel{ompsu}{{1}{9}{Plot of speedup versus $p$ for OpenMP algorithm.\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Plot of speedup versus $p$ for MPI algorithm.\relax }}{9}{figure.caption.3}}
-\newlabel{mpisu}{{2}{9}{Plot of speedup versus $p$ for MPI algorithm.\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Zoomed in plot of speedup versus $p$ for MPI algorithm.\relax }}{10}{figure.caption.4}}
-\newlabel{mpisu}{{3}{10}{Zoomed in plot of speedup versus $p$ for MPI algorithm.\relax }{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{10}{section.5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}OpenMP}{8}{subsubsection.4.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}MPI}{9}{subsubsection.4.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Plot of speedup versus $p$ for OpenMP algorithm, for prefix sum of $10^9$ integers.\relax }}{10}{figure.caption.2}}
+\newlabel{ompsu}{{1}{10}{Plot of speedup versus $p$ for OpenMP algorithm, for prefix sum of $10^9$ integers.\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Plot of speedup versus $p$ for MPI algorithm, for prefix sum of $10^9$ integers.\relax }}{10}{figure.caption.3}}
+\newlabel{mpisu}{{2}{10}{Plot of speedup versus $p$ for MPI algorithm, for prefix sum of $10^9$ integers.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Zoomed in plot of speedup versus $p$ for MPI algorithm, for prefix sum of 10$^9$ integers.\relax }}{11}{figure.caption.4}}
+\newlabel{mpizoomsu}{{3}{11}{Zoomed in plot of speedup versus $p$ for MPI algorithm, for prefix sum of 10$^9$ integers.\relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Weak Scaling Study}{12}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Plot of weak scaling efficiency versus $p$ for OpenMP algorithm, for $10^8$ integers per processor.\relax }}{12}{figure.caption.5}}
+\newlabel{ompw}{{4}{12}{Plot of weak scaling efficiency versus $p$ for OpenMP algorithm, for $10^8$ integers per processor.\relax }{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Plot of weak scaling efficiency versus $p$ for MPI algorithm, for $10^8$ integers per processor.\relax }}{13}{figure.caption.6}}
+\newlabel{mpiw}{{5}{13}{Plot of weak scaling efficiency versus $p$ for MPI algorithm, for $10^8$ integers per processor.\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Zoomed in plot of weak scaling for MPI algorithm, for $10^8$ integers per processor.\relax }}{13}{figure.caption.7}}
+\newlabel{mpizoomw}{{6}{13}{Zoomed in plot of weak scaling for MPI algorithm, for $10^8$ integers per processor.\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Computational time versus problem size}{14}{subsection.4.3}}
+\newlabel{ompn4}{{7a}{14}{$p=4$ \relax }{figure.caption.8}{}}
+\newlabel{sub@ompn4}{{a}{14}{$p=4$ \relax }{figure.caption.8}{}}
+\newlabel{ompn8}{{7b}{14}{$p=8$ \relax }{figure.caption.8}{}}
+\newlabel{sub@ompn8}{{b}{14}{$p=8$ \relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Plot of time $T_{exp}$ vs problem size $n$ for OpenMP algorithm.\relax }}{14}{figure.caption.8}}
+\newlabel{ompn}{{7}{14}{Plot of time $T_{exp}$ vs problem size $n$ for OpenMP algorithm.\relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Determining Asymptotic Coefficients}{14}{subsection.4.4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}OpenMP}{14}{subsubsection.4.4.1}}
+\newlabel{duh}{{2}{14}{OpenMP}{equation.4.2}{}}
+\newlabel{mpin4}{{8a}{15}{$p=4$ \relax }{figure.caption.9}{}}
+\newlabel{sub@mpin4}{{a}{15}{$p=4$ \relax }{figure.caption.9}{}}
+\newlabel{mpin16}{{8b}{15}{$p=16$ \relax }{figure.caption.9}{}}
+\newlabel{sub@mpin16}{{b}{15}{$p=16$ \relax }{figure.caption.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Plot of time $T_{exp}$ vs problem size $n$ for MPI algorithm.\relax }}{15}{figure.caption.9}}
+\newlabel{mpin}{{8}{15}{Plot of time $T_{exp}$ vs problem size $n$ for MPI algorithm.\relax }{figure.caption.9}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  Tabulated results for estimating asymptotic coefficients\relax }}{15}{table.caption.10}}
+\newlabel{tab1}{{1}{15}{Tabulated results for estimating asymptotic coefficients\relax }{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}MPI}{15}{subsubsection.4.4.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{15}{section.5}}
+\newlabel{ompn4}{{9a}{16}{$p=4$ \relax }{figure.caption.11}{}}
+\newlabel{sub@ompn4}{{a}{16}{$p=4$ \relax }{figure.caption.11}{}}
+\newlabel{ompn8}{{9b}{16}{$p=8$ \relax }{figure.caption.11}{}}
+\newlabel{sub@ompn8}{{b}{16}{$p=8$ \relax }{figure.caption.11}{}}
+\newlabel{ompnzoom8}{{9c}{16}{$p=8$, enlarged \relax }{figure.caption.11}{}}
+\newlabel{sub@ompnzoom8}{{c}{16}{$p=8$, enlarged \relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Plot of $T_{exp}/T_{pred}$ vs problem size $n$ for OpenMP algorithm.\relax }}{16}{figure.caption.11}}
+\newlabel{ompn}{{9}{16}{Plot of $T_{exp}/T_{pred}$ vs problem size $n$ for OpenMP algorithm.\relax }{figure.caption.11}{}}
+\newlabel{mpin4}{{10a}{17}{$p=4$ \relax }{figure.caption.12}{}}
+\newlabel{sub@mpin4}{{a}{17}{$p=4$ \relax }{figure.caption.12}{}}
+\newlabel{mpin16}{{10b}{17}{$p=16$ \relax }{figure.caption.12}{}}
+\newlabel{sub@mpin16}{{b}{17}{$p=16$ \relax }{figure.caption.12}{}}
+\newlabel{mpinzoom16}{{10c}{17}{$p=16$, enlarged \relax }{figure.caption.12}{}}
+\newlabel{sub@mpinzoom16}{{c}{17}{$p=16$, enlarged \relax }{figure.caption.12}{}}
+\newlabel{mpin64}{{10d}{17}{$p=64$ \relax }{figure.caption.12}{}}
+\newlabel{sub@mpin64}{{d}{17}{$p=64$ \relax }{figure.caption.12}{}}
+\newlabel{mpinzoom64}{{10e}{17}{$p=64$, enlarged \relax }{figure.caption.12}{}}
+\newlabel{sub@mpinzoom64}{{e}{17}{$p=64$, enlarged \relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Plot of $T_{exp}/T_{pred}$ vs problem size $n$ for MPI algorithm.\relax }}{17}{figure.caption.12}}
+\newlabel{mpin}{{10}{17}{Plot of $T_{exp}/T_{pred}$ vs problem size $n$ for MPI algorithm.\relax }{figure.caption.12}{}}

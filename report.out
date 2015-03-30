@@ -8,9 +8,16 @@
 \BOOKMARK [2][-]{subsection.3.2}{Description of Experiments}{section.3}% 8
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Strong Scaling Study}{subsection.3.2}% 9
 \BOOKMARK [3][-]{subsubsection.3.2.2}{Weak Scaling Study}{subsection.3.2}% 10
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Determining Asymptotic Coefficients}{subsection.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.3}{Statistics}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{Experimental Results and Analysis.}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{Strong Scaling Study \(speed up\)}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.2}{Weak Scaling Study}{section.4}% 15
-\BOOKMARK [1][-]{section.5}{Conclusions}{}% 16
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Speedup Versus Problem Size}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Determining Asymptotic Coefficients}{subsection.3.2}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Statistics}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Experimental Results and Analysis.}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Strong Scaling Study \(speed up\)}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.1.1}{OpenMP}{subsection.4.1}% 16
+\BOOKMARK [3][-]{subsubsection.4.1.2}{MPI}{subsection.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.2}{Weak Scaling Study}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.3}{Computational time versus problem size}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.4}{Determining Asymptotic Coefficients}{section.4}% 20
+\BOOKMARK [3][-]{subsubsection.4.4.1}{OpenMP}{subsection.4.4}% 21
+\BOOKMARK [3][-]{subsubsection.4.4.2}{MPI}{subsection.4.4}% 22
+\BOOKMARK [1][-]{section.5}{Conclusions}{}% 23
